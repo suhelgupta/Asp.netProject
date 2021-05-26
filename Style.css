@@ -1,0 +1,64 @@
+﻿body {
+}
+
+.hheading {
+    font-weight: bold;
+    background-color: red;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+/*#home12::before {
+    content: "";
+    position: absolute;
+    background: url("wallpaper10.png") center;
+    width: 100%;
+    height: 400px;
+    z-index: -1;
+    opacity: 0.9;
+}*/
+
+#mymaindiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 12px;
+    background-color: blue;
+    width: 58%;
+    margin: 57px auto 2px auto;
+}
+
+
+.mycoll {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /*border: 2px solid black;*/
+    width: 80%;
+    margin: 10px auto 2px auto;
+}
+
+.myitems {
+    padding: 13px;
+    margin: 30px;
+    width: 20%;
+    background-color: aqua;
+    border: 2px solid black;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.myitems:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.CodeAreaa{
+    border: 2px solid red; margin: 10px auto; padding: 20px;
+
+}
+

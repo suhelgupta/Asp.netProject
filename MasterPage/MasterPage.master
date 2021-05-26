@@ -1,0 +1,176 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/../Style.css" />
+    <style>
+        .CodeAreaa {
+            border: 2px solid red;
+            border-radius: 20px;
+            margin: 20px auto 20px auto;
+            padding: 20px;
+            width: 50%;
+            overflow: auto;
+            white-space: nowrap;
+        }
+        .NavMenu{
+            background-color:aliceblue;
+            margin: 20px auto;
+            border: 1px solid black;
+            border-radius:20px;
+        }
+        .menuitem{
+            margin: 5px 20px;
+            text-decoration:none;
+            color:black;
+        }
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <h1 class="hheading" style="margin: 30px auto 60px auto;">Master Page</h1>
+    <div class="CodeAreaa">
+        <form id="form2" runat="server">
+            <div class="NavMenu">
+                <asp:Menu ID="Menu1" runat="server" CssClass="menuitem" Orientation="Horizontal">
+                    <DynamicMenuItemStyle CssClass="menuitem" />
+                    <Items>
+                        <asp:MenuItem NavigateUrl="Home.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="contact.aspx" Text="Contact" Value="Contact"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="About.aspx" Text="About" Value="About"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="MasterPage.aspx" Text="Show MasterPage" Value="MasterPage"></asp:MenuItem>
+                    </Items>
+                    <StaticMenuItemStyle CssClass="menuitem" />
+                </asp:Menu>
+            </div>
+            <div>
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+            </div>
+        </form>
+    </div>
+    <div class="CodeAreaa" style="border: none; margin: 20px auto 1px auto;">
+        <button class="btn btn-danger" onclick="Toogle(a='Sourcecode')">Show/Hide Code</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="btn btn-danger" onclick="location.href='/../First.aspx'">Go to Main Page</button>
+    </div>
+    <div class="CodeAreaa" style="border: none; margin: 1px auto 10px auto; display: none;" id="Sourcecode">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="btn btn-danger" onclick="Toogle(a='Desinecode')">Show/Hide Design Part </button>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="btn btn-danger" onclick="Toogle(a='logiccode')">Show/Hide Logic Part</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="btn btn-danger" onclick="Toogle(a='Masterpage')">Show/Hide Master Page</button>
+    </div>
+   <div class="CodeAreaa" id="Desinecode" style="display:none;">
+        <div>
+            <code>
+                <pre>
+<asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+                </pre>
+            </code>
+        <button class="btn btn-danger btn-sm" style="margin-left:95%" onclick="hide(a='Desinecode')">Hide </button>
+        </div>
+    </div>
+    <div class="CodeAreaa" id="logiccode" style="display:none;">
+        <div>
+            <code>
+                <pre>
+<asp:ContentPlaceHolder id="ContentPlaceHolder3" runat="server"></asp:ContentPlaceHolder>
+                </pre>
+            </code>
+        <button class="btn btn-danger btn-sm" style="margin-left:95%" onclick="hide(a='logiccode')">Hide </button>
+        </div>
+    </div>
+        <div class="CodeAreaa" id="Masterpage" style="display:none;">
+        <div>
+            <code>
+                <pre>
+&lt;%@ Master Language=&quotC#&quot AutoEventWireup=&quottrue&quot CodeFile=&quotMasterPage.master.cs&quot Inherits=&quotCssTheamMasterPage_MasterPage&quot %&gt;
+
+&lt;!DOCTYPE html&gt;
+
+&lt;html xmlns=&quothttp://www.w3.org/1999/xhtml&quot&gt;
+&lt;head runat=&quotserver&quot&gt;
+    &lt;title&gt;MasterPage&lt;/title&gt;
+    &lt;style&gt;
+    &lt;style&gt;
+        .CodeAreaa {
+            border: 2px solid red;
+            border-radius: 20px;
+            margin: 20px auto 20px auto;
+            padding: 20px;
+            width: 50%;
+            overflow: auto;
+            white-space: nowrap;
+        }
+        .NavMenu{
+            background-color:aliceblue;
+            margin: 20px auto;
+            border: 1px solid black;
+            border-radius:20px;
+        }
+        .menuitem{
+            margin: 5px 20px;
+            text-decoration:none;
+            color:black;
+        }
+    &lt;/style&gt;
+    &lt;asp:ContentPlaceHolder id=&quothead&quot runat=&quotserver&quot&gt;
+    &lt;/asp:ContentPlaceHolder&gt;
+&lt;/head&gt;    
+&lt;body&gt;
+    &lt;h1 class=&quothheading&quot style=&quotmargin: 30px auto 60px auto;&quot&gt;Master Page&lt;/h1&gt;
+    &lt;div class=&quotCodeAreaa&quot&gt;
+        &lt;form id=&quotform2&quot runat=&quotserver&quot&gt;
+            &lt;div class=&quotNavMenu&quot&gt;
+                &lt;asp:Menu ID=&quotMenu1&quot runat=&quotserver&quot CssClass=&quotmenuitem&quot Orientation=&quotHorizontal&quot&gt;
+                    &lt;DynamicMenuItemStyle CssClass=&quotmenuitem&quot /&gt;
+                    &lt;Items&gt;
+                        &lt;asp:MenuItem NavigateUrl=&quotHome.aspx&quot Text=&quotHome&quot Value=&quotHome&quot&gt;&lt;/asp:MenuItem&gt;
+                        &lt;asp:MenuItem NavigateUrl=&quotcontact.aspx&quot Text=&quotContact&quot Value=&quotContact&quot&gt;&lt;/asp:MenuItem&gt;
+                        &lt;asp:MenuItem NavigateUrl=&quotAbout.aspx&quot Text=&quotAbout&quot Value=&quotAbout&quot&gt;&lt;/asp:MenuItem&gt;
+                        &lt;asp:MenuItem NavigateUrl=&quotMasterPage.aspx&quot Text=&quotShow MasterPage&quot Value=&quotMasterPage&quot&gt;&lt;/asp:MenuItem&gt;
+                    &lt;/Items&gt;
+                    &lt;StaticMenuItemStyle CssClass=&quotmenuitem&quot /&gt;
+                &lt;/asp:Menu&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;asp:ContentPlaceHolder id=&quotContentPlaceHolder1&quot runat=&quotserver&quot&gt;
+                &lt;/asp:ContentPlaceHolder&gt;
+
+            &lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+
+                </pre>
+            </code>
+        <button class="btn btn-danger btn-sm" style="margin-left:95%" onclick="hide(a='Masterpage')">Hide </button>
+        </div>
+    </div>
+
+    <script>
+        function Toogle(id2) {
+            //let btn = document.getElementById(id1);
+            let para = document.getElementById(id2);
+            if (para.style.display != "none") { /* para.style.display Using this we can change the   */
+                para.style.display = "none";
+            }
+            else {
+                para.style.display = "";
+            }
+        }
+
+        function hide(a) {
+            let para = document.getElementById(a);
+            para.style.display = "none";
+
+        }
+
+    </script>
+</body>
+</html>
