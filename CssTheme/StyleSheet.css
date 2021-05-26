@@ -1,0 +1,41 @@
+﻿body {
+}
+.Externalcssheading{
+    display: inline-block;
+    width: 35%; 
+    padding: 14px 48px; 
+    margin: 0px 304px; 
+    border: 2px solid black; 
+    border-radius: 42px; 
+    background-color: Khaki;
+}
+
+.Externalcsspara{
+    color:Olive; 
+    font-size: 18px; 
+    font-family: cursive;
+}
+
+.Selectorcssheading{
+    display: inline-block;
+    width: 35%; 
+    padding: 14px 48px; 
+    margin: 0px 304px; 
+    border: 2px solid black; 
+    border-radius: 42px; 
+    background-color: Khaki;
+}
+
+
+.NavMenu{
+    background-color: WhiteSmoke;
+    /*aliceblue*/
+    margin: 20px auto;
+    border: 1px solid black;
+    border-radius:20px;
+}
+.menuitem{
+    margin: 5px 20px;
+    text-decoration:none;
+    color:black;
+}

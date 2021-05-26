@@ -1,0 +1,39 @@
+﻿* {
+    font-size: 17px;
+    color : red;
+}
+
+.Selectorcssheading{
+    display: inline-block;
+    width: 29%; 
+    padding: 14px 48px; 
+    margin: 0px 328px; 
+    border: 2px solid black; 
+    border-radius: 42px; 
+    background-color: Aquamarine;
+    font-size: 32px;
+    color : black;
+}
+
+h6{
+    font-weight: normal;
+    color: DarkGreen;
+}
+
+h3,h4,h5, span{
+    display: inline;
+    color: DarkMagenta;
+    font-weight: normal;
+    font-size: 17px;
+    
+}
+
+#IdSelector{
+    color:DarkOrange;
+    text-decoration:underline;
+}
+
+.classselector{
+    display: inline;
+    color: blue;
+}
